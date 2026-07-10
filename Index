@@ -40,6 +40,34 @@
     background:var(--navy-deep);
   }
 
+  /* ---------- NAV ---------- */
+  .site-nav{
+    background:#0b3a5c;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    padding:0 clamp(16px, 4vw, 40px);
+  }
+  .site-nav a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    font-family:var(--sans);
+    font-size:clamp(.8rem, 1.3vw, 1rem);
+    padding:clamp(14px, 2.2vw, 20px) clamp(10px, 1.6vw, 20px);
+    display:flex;
+    align-items:center;
+    gap:4px;
+    white-space:nowrap;
+  }
+  .site-nav a.active{ color:#d7e02a; }
+  .site-nav a:hover{ color:var(--gold-soft); }
+  .site-nav a .caret{
+    font-size:.65em;
+    margin-left:2px;
+    transform:translateY(1px);
+  }
+
   /* ---------- HERO ---------- */
   .hero{
     position:relative;
@@ -60,28 +88,28 @@
     gap:6px;
   }
   .crest{
-    width:118px;
-    height:118px;
+    width:clamp(80px, 12vw, 118px);
+    height:clamp(80px, 12vw, 118px);
     filter:drop-shadow(0 4px 14px rgba(0,0,0,0.6));
   }
   .school-name{
     margin-top:6px;
     font-family:var(--serif);
     font-weight:700;
-    font-size:1.55rem;
+    font-size:clamp(1.05rem, 3.2vw, 1.9rem);
     letter-spacing:.14em;
     color:#fff;
     text-shadow:0 2px 10px rgba(0,0,0,0.6);
   }
   .anniv{
     margin-top:18px;
-    width:96px;
-    height:96px;
+    width:clamp(64px, 9vw, 96px);
+    height:clamp(64px, 9vw, 96px);
     filter:drop-shadow(0 4px 12px rgba(0,0,0,0.6));
   }
   .anniv-label{
     font-family:var(--serif);
-    font-size:1.3rem;
+    font-size:clamp(.95rem, 2.6vw, 1.3rem);
     font-weight:700;
     letter-spacing:.5em;
     color:var(--gold-soft);
@@ -90,7 +118,7 @@
   .anniv-years{
     font-family:var(--serif);
     font-weight:900;
-    font-size:1.05rem;
+    font-size:clamp(.82rem, 2.1vw, 1.05rem);
     letter-spacing:.12em;
     color:var(--gold-soft);
     margin-top:6px;
@@ -106,17 +134,17 @@
 
   /* ---------- SECTION shells ---------- */
   section{
-    padding:56px 34px 60px;
+    padding:clamp(32px, 6vw, 56px) clamp(18px, 6vw, 60px) clamp(36px, 6.5vw, 60px);
     position:relative;
   }
   .sec-title{
     text-align:center;
     font-family:var(--serif);
     font-weight:700;
-    font-size:1.5rem;
+    font-size:clamp(1.1rem, 2.6vw, 1.7rem);
     letter-spacing:.3em;
     color:#e2453f;
-    margin:0 0 40px;
+    margin:0 0 clamp(24px, 4vw, 40px);
   }
   .sec-title.gold{ color:var(--gold-soft); }
 
@@ -133,8 +161,8 @@
     margin:0 auto;
   }
   .badge-emblem{
-    width:190px;
-    height:190px;
+    width:clamp(130px, 20vw, 190px);
+    height:clamp(130px, 20vw, 190px);
     flex-shrink:0;
     filter:drop-shadow(0 6px 18px rgba(0,0,0,0.5));
   }
@@ -144,13 +172,14 @@
     padding:0;
     display:flex;
     flex-direction:column;
-    gap:22px;
-    max-width:480px;
+    gap:clamp(16px, 2.5vw, 22px);
+    max-width:600px;
+    width:100%;
   }
   .badge-points li{
     position:relative;
     padding-left:22px;
-    font-size:.92rem;
+    font-size:clamp(.86rem, 1.7vw, 1.02rem);
     color:var(--ink-dim);
     text-align:justify;
   }
@@ -172,13 +201,13 @@
     text-align:center;
   }
   .motto-block{
-    max-width:480px;
+    max-width:600px;
     margin:0 auto;
   }
   .motto-block p{
     margin:0 0 6px;
     color:var(--ink-dim);
-    font-size:.95rem;
+    font-size:clamp(.88rem, 1.8vw, 1.05rem);
   }
   .motto-block .quote{
     margin:22px 0;
@@ -186,7 +215,7 @@
     border-top:1px solid var(--rule);
     border-bottom:1px solid var(--rule);
     color:var(--ink);
-    font-size:.98rem;
+    font-size:clamp(.9rem, 1.9vw, 1.08rem);
   }
   .motto-block .spacer{ height:34px; }
   .motto-block .emph{ color:var(--gold-soft); letter-spacing:.05em; }
@@ -201,7 +230,7 @@
     text-align:center;
     font-family:var(--serif);
     font-weight:700;
-    font-size:1.4rem;
+    font-size:clamp(1.05rem, 2.4vw, 1.55rem);
     letter-spacing:.2em;
     margin-bottom:26px;
     background:linear-gradient(90deg, #4d7bd6, #d64d4d);
@@ -235,7 +264,8 @@
   }
   .video-link{
     display:block;
-    max-width:640px;
+    max-width:720px;
+    width:100%;
     margin:0 auto;
     text-decoration:none;
     border-radius:8px;
@@ -277,91 +307,56 @@
     padding:12px 16px;
     background:linear-gradient(120deg, #16305e 0%, #1a3a6b 30%, #3a1a24 70%, #6e1f24 100%);
     color:#f1efe8;
-    font-size:.82rem;
+    font-size:clamp(.75rem, 1.5vw, .95rem);
     text-align:center;
     letter-spacing:.08em;
   }
-  .score-card .staff-title{
-    text-align:center;
-    color:#fff;
-    font-family:var(--serif);
-    letter-spacing:.5em;
-    font-size:1rem;
-    margin-bottom:6px;
-  }
-  .score-card .staff-sub{
-    text-align:center;
-    color:#dcdcdc;
-    font-size:.78rem;
-    letter-spacing:.15em;
-    margin-bottom:18px;
-    font-style:italic;
-  }
-  .staff{
-    position:relative;
-    margin:0 auto 14px;
-    max-width:100%;
-  }
-  .play-btn{
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    width:34px;
-    height:34px;
-    border-radius:50%;
-    border:2px solid rgba(255,255,255,0.85);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-  .play-btn::before{
-    content:"";
-    border-left:9px solid rgba(255,255,255,0.9);
-    border-top:6px solid transparent;
-    border-bottom:6px solid transparent;
-    margin-left:3px;
-  }
-  .lyric-row{
-    display:flex;
-    justify-content:space-between;
-    color:#f1efe8;
-    font-size:.72rem;
-    letter-spacing:.06em;
-    margin-top:4px;
-    padding:0 6px;
-  }
   .footer-note{
     text-align:right;
-    font-size:.7rem;
+    font-size:clamp(.62rem, 1.2vw, .75rem);
     color:var(--ink-dim);
     padding:0 34px 10px;
     opacity:.6;
   }
   .site-footer{
     text-align:center;
-    font-size:.78rem;
+    font-size:clamp(.7rem, 1.4vw, .85rem);
     color:var(--ink-dim);
     padding:22px 20px 40px;
     border-top:1px solid var(--rule);
   }
-  .site-footer .links span{
+  .site-footer a{
+    color:var(--ink-dim);
+    text-decoration:none;
     margin:0 8px;
   }
+  .site-footer a:hover{ text-decoration:underline; color:var(--ink); }
   .site-footer .sub{
     margin-top:8px;
     opacity:.7;
   }
 
   @media (max-width:520px){
-    .school-name{font-size:1.2rem;}
-    section{padding:44px 20px 48px;}
-    .badge-points li{font-size:.86rem;}
+    section{padding:32px 18px 40px;}
   }
 </style>
 </head>
 <body>
 <div class="page">
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <a href="index.html" class="active">主頁</a>
+    <a href="jubilee.html">50 金禧 <span class="caret">▾</span></a>
+    <a href="#">55 翡翠禧</a>
+    <a href="#">校園今昔 <span class="caret">▾</span></a>
+    <a href="#">賢社 <span class="caret">▾</span></a>
+    <a href="#">同學 <span class="caret">▾</span></a>
+    <a href="#">那些時光 <span class="caret">▾</span></a>
+    <a href="#">流金歲月 <span class="caret">▾</span></a>
+    <a href="#">編後頁 <span class="caret">▾</span></a>
+    <a href="#">最新上載 <span class="caret">▾</span></a>
+  </nav>
 
   <!-- HERO -->
   <div class="hero">
@@ -372,7 +367,7 @@
   <section class="sec-badge" id="badge">
     <h2 class="sec-title">校徽簡釋</h2>
     <div class="badge-layout">
-      <img class="badge-emblem" src="https://i0.wp.com/goldenyinnies.com/wp-content/uploads/2022/12/New-Pui-Ching-Insignia.png?w=904&amp;ssl=1" alt="香港培正中學校徽" style="width:190px;height:190px;object-fit:contain;">
+      <img class="badge-emblem" src="https://i0.wp.com/goldenyinnies.com/wp-content/uploads/2022/12/New-Pui-Ching-Insignia.png?w=904&amp;ssl=1" alt="香港培正中學校徽" style="object-fit:contain;">
 
       <ul class="badge-points">
         <li><b>中間的四個字是校訓</b>，承載它的是一本書，那就是聖經。培正是奉基督耶穌聖名而創立，所以要立在基督磐石上。</li>
@@ -449,9 +444,17 @@
 
   <footer class="site-footer">
     <div class="links">
-      <span>主頁</span> <span>55 屆聚珍慶祝</span> <span>校長老師寄言</span> <span>校園今音</span> <span>賢社</span> <span>同學</span> <span>那些時光</span> <span>流金歲月</span>
+      <a href="index.html">主頁</a>
+      <a href="jubilee.html">50 金禧</a>
+      <a href="#">55 翡翠禧</a>
+      <a href="#">校園今昔</a>
+      <a href="#">賢社</a>
+      <a href="#">同學</a>
+      <a href="#">那些時光</a>
+      <a href="#">流金歲月</a>
+      <a href="#">編後頁</a>
     </div>
-    <div class="sub">編後語 &nbsp; 最新上載</div>
+    <div class="sub"><a href="#">最新上載</a></div>
   </footer>
 
 </div>
