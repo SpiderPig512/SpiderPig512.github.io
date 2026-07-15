@@ -1,1 +1,461 @@
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港培正中學 55 屆聚珍慶祝 · 賢社</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#eee7d8;
+    --ink-dim:#c9c2b0;
+    --navy:#0c1a2b;
+    --navy-deep:#081220;
+    --green:#122b26;
+    --green-deep:#0a1b18;
+    --red:#a8232b;
+    --red-deep:#5c1015;
+    --blue:#1c3f6e;
+    --blue-deep:#0e2140;
+    --gold:#cda43e;
+    --gold-soft:#e6c869;
+    --rule: rgba(238,231,216,0.18);
+    --serif: "Noto Serif TC", serif;
+    --sans: "Noto Sans TC", sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--navy-deep);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.9;
+  }
+  .page{
+    max-width:100%;
+    margin:0;
+    background:var(--navy-deep);
+  }
 
+  /* ---------- NAV ---------- */
+  .site-nav{
+    background:#0b3a5c;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    padding:0 clamp(16px, 4vw, 40px);
+  }
+  .site-nav a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    font-family:var(--sans);
+    font-size:clamp(.8rem, 1.3vw, 1rem);
+    padding:clamp(14px, 2.2vw, 20px) clamp(10px, 1.6vw, 20px);
+    display:flex;
+    align-items:center;
+    gap:4px;
+    white-space:nowrap;
+  }
+  .site-nav a.active{ color:#d7e02a; }
+  .site-nav a:hover{ color:var(--gold-soft); }
+  .site-nav a .caret{
+    font-size:.65em;
+    margin-left:2px;
+    transform:translateY(1px);
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+  }
+  .hero::before{
+    content:none;
+  }
+  .hero-inner{
+    position:relative;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+  }
+  .crest{
+    width:clamp(80px, 12vw, 118px);
+    height:clamp(80px, 12vw, 118px);
+    filter:drop-shadow(0 4px 14px rgba(0,0,0,0.6));
+  }
+  .school-name{
+    margin-top:6px;
+    font-family:var(--serif);
+    font-weight:700;
+    font-size:clamp(1.05rem, 3.2vw, 1.9rem);
+    letter-spacing:.14em;
+    color:#fff;
+    text-shadow:0 2px 10px rgba(0,0,0,0.6);
+  }
+  .anniv{
+    margin-top:18px;
+    width:clamp(64px, 9vw, 96px);
+    height:clamp(64px, 9vw, 96px);
+    filter:drop-shadow(0 4px 12px rgba(0,0,0,0.6));
+  }
+  .anniv-label{
+    font-family:var(--serif);
+    font-size:clamp(.95rem, 2.6vw, 1.3rem);
+    font-weight:700;
+    letter-spacing:.5em;
+    color:var(--gold-soft);
+    margin-top:2px;
+  }
+  .anniv-years{
+    font-family:var(--serif);
+    font-weight:900;
+    font-size:clamp(.82rem, 2.1vw, 1.05rem);
+    letter-spacing:.12em;
+    color:var(--gold-soft);
+    margin-top:6px;
+    display:flex;
+    gap:10px;
+    align-items:center;
+  }
+  .anniv-years span:not(:last-child)::after{
+    content:"›";
+    margin-left:10px;
+    color:var(--gold);
+  }
+
+  /* ---------- SECTION shells ---------- */
+  section{
+    padding:clamp(32px, 6vw, 56px) clamp(18px, 6vw, 60px) clamp(36px, 6.5vw, 60px);
+    position:relative;
+  }
+  .sec-title{
+    text-align:center;
+    font-family:var(--serif);
+    font-weight:700;
+    font-size:clamp(1.1rem, 2.6vw, 1.7rem);
+    letter-spacing:.3em;
+    color:#e2453f;
+    margin:0 0 clamp(24px, 4vw, 40px);
+  }
+  .sec-title.gold{ color:var(--gold-soft); }
+
+  /* ---------- BADGE EXPLANATION (green) ---------- */
+  .sec-badge{
+    background:linear-gradient(180deg, var(--green) 0%, var(--green-deep) 100%);
+  }
+  .badge-layout{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:36px;
+    max-width:700px;
+    margin:0 auto;
+  }
+  .badge-emblem{
+    width:clamp(130px, 20vw, 190px);
+    height:clamp(130px, 20vw, 190px);
+    flex-shrink:0;
+    filter:drop-shadow(0 6px 18px rgba(0,0,0,0.5));
+  }
+  .badge-points{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:clamp(16px, 2.5vw, 22px);
+    max-width:600px;
+    width:100%;
+  }
+  .badge-points li{
+    position:relative;
+    padding-left:22px;
+    font-size:clamp(.86rem, 1.7vw, 1.02rem);
+    color:var(--ink-dim);
+    text-align:justify;
+  }
+  .badge-points li::before{
+    content:"";
+    position:absolute;
+    left:2px;
+    top:.55em;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--gold-soft);
+  }
+  .badge-points b{ color:var(--ink); font-weight:500; }
+
+  /* ---------- MOTTO / COLORS (navy) ---------- */
+  .sec-motto{
+    background:radial-gradient(ellipse at 50% 0%, #12294a 0%, var(--navy) 45%, var(--navy-deep) 100%);
+    text-align:center;
+  }
+  .motto-block{
+    max-width:600px;
+    margin:0 auto;
+  }
+  .motto-block p{
+    margin:0 0 6px;
+    color:var(--ink-dim);
+    font-size:clamp(.88rem, 1.8vw, 1.05rem);
+  }
+  .motto-block .quote{
+    margin:22px 0;
+    padding:20px 22px;
+    border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+    color:var(--ink);
+    font-size:clamp(.9rem, 1.9vw, 1.08rem);
+  }
+  .motto-block .spacer{ height:34px; }
+  .motto-block .emph{ color:var(--gold-soft); letter-spacing:.05em; }
+
+  /* ---------- SONG SECTIONS ---------- */
+  .sec-song{
+    padding-top:48px;
+    padding-bottom:8px;
+    background:var(--navy-deep);
+  }
+  .song-title{
+    text-align:center;
+    font-family:var(--serif);
+    font-weight:700;
+    font-size:clamp(1.05rem, 2.4vw, 1.55rem);
+    letter-spacing:.2em;
+    margin-bottom:26px;
+    background:linear-gradient(90deg, #4d7bd6, #d64d4d);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .score-card{
+    position:relative;
+    border-radius:6px;
+    overflow:hidden;
+    background:linear-gradient(120deg, #16305e 0%, #1a3a6b 30%, #3a1a24 70%, #6e1f24 100%);
+    padding:26px 20px 30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.45);
+  }
+  .video-embed{
+    position:relative;
+    width:100%;
+    padding-top:56.25%; /* 16:9 */
+    border-radius:6px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.45);
+    background:#000;
+  }
+  .video-embed iframe{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    border:0;
+  }
+  .video-link{
+    display:block;
+    max-width:720px;
+    width:100%;
+    margin:0 auto;
+    text-decoration:none;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.45);
+    transition:transform .15s ease;
+  }
+  .video-link:hover{ transform:translateY(-2px); }
+  .video-thumb{
+    position:relative;
+    width:100%;
+    padding-top:56.25%;
+    background-size:cover;
+    background-position:center;
+    background-color:#000;
+  }
+  .play-circle{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    background:rgba(20,20,20,0.65);
+    border:2px solid rgba(255,255,255,0.9);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .play-circle::before{
+    content:"";
+    border-left:18px solid #fff;
+    border-top:11px solid transparent;
+    border-bottom:11px solid transparent;
+    margin-left:5px;
+  }
+  .video-caption{
+    padding:12px 16px;
+    background:linear-gradient(120deg, #16305e 0%, #1a3a6b 30%, #3a1a24 70%, #6e1f24 100%);
+    color:#f1efe8;
+    font-size:clamp(.75rem, 1.5vw, .95rem);
+    text-align:center;
+    letter-spacing:.08em;
+  }
+  .footer-note{
+    text-align:right;
+    font-size:clamp(.62rem, 1.2vw, .75rem);
+    color:var(--ink-dim);
+    padding:0 34px 10px;
+    opacity:.6;
+  }
+  .site-footer{
+    text-align:center;
+    font-size:clamp(.7rem, 1.4vw, .85rem);
+    color:var(--ink-dim);
+    padding:22px 20px 40px;
+    border-top:1px solid var(--rule);
+  }
+  .site-footer a{
+    color:var(--ink-dim);
+    text-decoration:none;
+    margin:0 8px;
+  }
+  .site-footer a:hover{ text-decoration:underline; color:var(--ink); }
+  .site-footer .sub{
+    margin-top:8px;
+    opacity:.7;
+  }
+
+  @media (max-width:520px){
+    section{padding:32px 18px 40px;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <a href="index.html" class="active">主頁</a>
+    <a href="jubilee.html">50 金禧 <span class="caret">▾</span></a>
+    <a href="#">55 翡翠禧</a>
+    <a href="#">校園今昔 <span class="caret">▾</span></a>
+    <a href="#">賢社 <span class="caret">▾</span></a>
+    <a href="#">同學 <span class="caret">▾</span></a>
+    <a href="#">那些時光 <span class="caret">▾</span></a>
+    <a href="#">流金歲月 <span class="caret">▾</span></a>
+    <a href="#">編後頁 <span class="caret">▾</span></a>
+    <a href="#">最新上載 <span class="caret">▾</span></a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="https://i0.wp.com/goldenyinnies.com/wp-content/uploads/2022/12/Circular-stairs-Logos.png?fit=2000%2C1333&ssl=1" alt="香港培正中學 賢社 55週年" style="width:100%;display:block;">
+  </div>
+
+  <!-- BADGE EXPLANATION -->
+  <section class="sec-badge" id="badge">
+    <h2 class="sec-title">校徽簡釋</h2>
+    <div class="badge-layout">
+      <img class="badge-emblem" src="https://i0.wp.com/goldenyinnies.com/wp-content/uploads/2022/12/New-Pui-Ching-Insignia.png?w=904&amp;ssl=1" alt="香港培正中學校徽" style="object-fit:contain;">
+
+      <ul class="badge-points">
+        <li><b>中間的四個字是校訓</b>，承載它的是一本書，那就是聖經。培正是奉基督耶穌聖名而創立，所以要立在基督磐石上。</li>
+        <li><b>紅色的圓盤代表太陽</b>，代表火熱的心，同時每個方向有七道光芒指向四方。七在聖經上意味完全和美好，那就是叫我們在世上像耶穌發美好的光。而聖經與太陽同軌，示聖經傳遍天下，如同太陽普照大地。1889代表本校創校年份。</li>
+        <li><b>圍著光芒的正方形</b>，代表我們做事要有規範和原則，不任意而行。而四條線亦可喻德、智、體、群四育。</li>
+        <li><b>藍色加上四顆星星</b>代表無垠的宇宙，喻我們要目光遠大，像星星般無論晝夜皆能自發光耀於長空。</li>
+        <li><b>再向外面是中英文校名</b>，上中下英，循圈而列，示培正之事業，與四育之造詣皆應完善至正。</li>
+        <li><b>最外的紅色圓圈</b>，連合內裡的正方形，表示做人處事要外圓內方，叫我們既要圓滑對人，但又不可隨波逐流，放棄原則。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- MOTTO & COLOURS -->
+  <section class="sec-motto" id="motto">
+    <h2 class="sec-title gold">校訓和校色簡釋</h2>
+    <div class="motto-block">
+      <p>1916 年，中學部成立。</p>
+      <p>楊元勳監督以</p>
+      <p>「至善至正」為校訓，</p>
+      <p>取自《舊約聖經》的</p>
+      <p>〈申命記〉12章28節</p>
+
+      <div class="quote">
+        「你要謹守聽從我所吩咐的一切話，<br>
+        行耶和華你 神眼中看為善，<br>
+        看為正的事，這樣，<br>
+        你和你的子孫就可以永遠幸福。」
+      </div>
+
+      <p>以及〈詩篇〉25章8節</p>
+      <div class="quote">
+        「耶和華是良善正直的，<br>
+        所以他必指示罪人走正路。」
+      </div>
+      <p>可見培正的立校精神</p>
+      <p class="emph">建基於基督教的義理訓誡。</p>
+
+      <div class="spacer"></div>
+
+      <p>1917 年，</p>
+      <p>當時培正並沒有規定校色、校旗，</p>
+      <p>楊元勳監督認為培正應有其光輝標誌，</p>
+      <p>遂以紅藍色為校色，並以此設計紅藍校旗，</p>
+      <p>自此紅藍兩色便代表了培正精神。</p>
+      <p>一般而言，</p>
+      <p class="emph">紅色代表澎湃的熱情和火熱的心；</p>
+      <p class="emph">藍色代表冷靜機智、周到的思考和策劃。</p>
+    </div>
+  </section>
+
+  <!-- SCHOOL ANTHEM -->
+  <section class="sec-song" id="anthem">
+    <h3 class="song-title">培正校歌</h3>
+    <a class="video-link" href="https://youtu.be/nstEiwZhfn4" target="_blank" rel="noopener">
+      <div class="video-thumb" style="background-image:url('https://img.youtube.com/vi/nstEiwZhfn4/hqdefault.jpg');">
+        <div class="play-circle"></div>
+      </div>
+      <div class="video-caption">在 YouTube 觀看「培正校歌」</div>
+    </a>
+  </section>
+
+  <!-- FLAG ANTHEM -->
+  <section class="sec-song" id="flag-anthem">
+    <h3 class="song-title">校旗歌</h3>
+    <a class="video-link" href="https://youtu.be/TsQ42PKY3yw" target="_blank" rel="noopener">
+      <div class="video-thumb" style="background-image:url('https://img.youtube.com/vi/TsQ42PKY3yw/hqdefault.jpg');">
+        <div class="play-circle"></div>
+      </div>
+      <div class="video-caption">在 YouTube 觀看「校旗歌」</div>
+    </a>
+  </section>
+
+  <div class="footer-note">Post Views: 40,800</div>
+
+  <footer class="site-footer">
+    <div class="links">
+      <a href="index.html">主頁</a>
+      <a href="jubilee.html">50 金禧</a>
+      <a href="#">55 翡翠禧</a>
+      <a href="#">校園今昔</a>
+      <a href="#">賢社</a>
+      <a href="#">同學</a>
+      <a href="#">那些時光</a>
+      <a href="#">流金歲月</a>
+      <a href="#">編後頁</a>
+    </div>
+    <div class="sub"><a href="#">最新上載</a></div>
+  </footer>
+
+</div>
+</body>
+</html>
