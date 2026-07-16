@@ -1,1 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>校長老師序言 ~ 校長贈言 - Golden Yinnies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f7f4ec;
+    --brown:#4a2a12;
+    --brown-deep:#3a2010;
+    --panel:#a98868;
+    --gold-dark:#d99e1f;
+    --ink:#242018;
+    --ink-dim:#4a4a4a;
+    --sans:"Noto Sans TC", sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:var(--sans);
+  }
 
+  /* ---------- NAV ---------- */
+  .site-nav{
+    background:var(--brown);
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    padding:0 clamp(16px, 4vw, 40px);
+  }
+  .site-nav a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    font-size:clamp(.8rem, 1.3vw, 1rem);
+    padding:clamp(14px, 2.2vw, 20px) clamp(10px, 1.6vw, 20px);
+    display:flex;
+    align-items:center;
+    gap:4px;
+    white-space:nowrap;
+  }
+  .site-nav a.active{ color:#d7e02a; }
+  .site-nav a:hover{ color:var(--gold-dark); }
+  .site-nav a .caret{
+    font-size:.65em;
+    margin-left:2px;
+    transform:translateY(1px);
+  }
+
+  /* ---------- TOP ---------- */
+  .top-section{
+    padding:clamp(28px, 5vw, 46px) clamp(16px, 4vw, 40px) clamp(10px, 2vw, 20px);
+  }
+  .page-title{
+    text-align:center;
+    font-size:clamp(1.3rem, 3.2vw, 2.1rem);
+    font-weight:500;
+    letter-spacing:.08em;
+    margin:0 0 clamp(18px, 3vw, 26px);
+  }
+
+  /* ---------- PLUS DIVIDER ---------- */
+  .plus-wrap{
+    max-width:1500px;
+    margin:0 auto clamp(24px, 4.5vw, 40px);
+    overflow:hidden;
+    white-space:nowrap;
+    font-weight:900;
+    font-size:clamp(1rem, 2.4vw, 1.6rem);
+    letter-spacing:clamp(2px, .8vw, 8px);
+    color:#1c1c1c;
+    line-height:1;
+  }
+
+  /* ---------- PANEL ---------- */
+  .panel{
+    max-width:1500px;
+    margin:0 auto clamp(20px, 4vw, 34px);
+    background:var(--panel);
+    padding:clamp(18px, 3vw, 34px);
+    border-radius:2px;
+  }
+  .card-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:clamp(18px, 3vw, 34px);
+  }
+  .card{
+    background:#fff;
+    padding:clamp(18px, 3vw, 30px);
+  }
+  .card-heading{
+    font-size:clamp(.85rem, 1.5vw, 1rem);
+    font-weight:700;
+    margin:0 0 16px;
+  }
+  .avatar{
+    width:100%;
+    max-width:280px;
+    aspect-ratio:3/4;
+    margin:0 auto 14px;
+    display:block;
+    background:#e4e4e4;
+  }
+  .avatar svg{ width:100%; height:100%; display:block; }
+  .card-name{
+    text-align:center;
+    font-weight:700;
+    font-size:clamp(.95rem, 1.7vw, 1.15rem);
+    margin:0 0 16px;
+  }
+  .card-text{
+    font-size:clamp(.82rem, 1.4vw, .95rem);
+    line-height:1.9;
+    color:var(--ink);
+    text-align:justify;
+  }
+  .poem{
+    display:flex;
+    flex-direction:column;
+    gap:clamp(14px, 2.6vw, 22px);
+    align-items:center;
+    margin-top:6px;
+  }
+  .poem p{
+    margin:0;
+    font-size:clamp(1rem, 2vw, 1.3rem);
+    font-weight:700;
+    letter-spacing:clamp(4px, 1.4vw, 12px);
+  }
+
+  /* ---------- POST VIEWS ---------- */
+  .post-views{
+    max-width:1500px;
+    margin:clamp(14px, 2.5vw, 20px) auto 0;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:var(--gold-dark);
+    font-size:.9rem;
+    padding:0 clamp(16px, 4vw, 40px) clamp(40px, 6vw, 60px);
+  }
+  .post-views svg{ width:16px; height:16px; }
+
+  /* ---------- FOOTER ---------- */
+  .site-footer{
+    text-align:center;
+    font-size:clamp(.82rem, 1.4vw, .98rem);
+    color:var(--ink-dim);
+    padding:clamp(20px, 3vw, 30px) 20px clamp(40px, 6vw, 60px);
+  }
+  .site-footer a{
+    color:var(--ink-dim);
+    text-decoration:none;
+    margin:0 clamp(6px, 1.2vw, 14px);
+  }
+  .site-footer a:hover{ text-decoration:underline; }
+  .site-footer .sub{ margin-top:4px; }
+
+  @media (max-width:760px){
+    .card-grid{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <a href="index.html">主頁</a>
+    <a href="jubilee.html" class="active">50 金禧 <span class="caret">▾</span></a>
+    <a href="#">55 翡翠禧</a>
+    <a href="#">母校培正 <span class="caret">▾</span></a>
+    <a href="#">賢社 <span class="caret">▾</span></a>
+    <a href="#">同學 <span class="caret">▾</span></a>
+    <a href="#">那些時光 <span class="caret">▾</span></a>
+    <a href="#">流金歲月 <span class="caret">▾</span></a>
+    <a href="#">編後頁 <span class="caret">▾</span></a>
+    <a href="#">最新上載 <span class="caret">▾</span></a>
+  </nav>
+
+  <div class="top-section">
+    <h1 class="page-title">校長老師序言 ~ 校長贈言</h1>
+
+    <!-- PLUS DIVIDER -->
+    <div class="plus-wrap" id="plusDivider"></div>
+
+    <!-- PANEL -->
+    <div class="panel">
+      <div class="card-grid">
+
+        <!-- LEFT CARD -->
+        <div class="card">
+          <div class="card-heading">賢社金禧贈言</div>
+          <div class="avatar">
+            <img src="https://i0.wp.com/goldenyinnies.com/wp-content/uploads/2022/10/Copy-of-%E4%BD%95%E5%8A%9B%E9%AB%98%E6%A0%A1%E9%95%B7-%E4%B8%AD%E5%AD%B8a.png?fit=2014%2C2606&amp;ssl=1" alt="何力高校長" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="card-name">何力高校長 (中學)</div>
+          <div class="card-text">
+            培正是很蒙福的學校，既有上帝的恩典保守，又有遍佈世界各地的紅藍兒女關心支持。今年欣逢賢社金禧紀念，各位賢社學長聚首一堂暢談往事之餘，更一呼百應集腋成裘，出資為母校重修學生食堂，讓學生有更舒適時尚的地方用膳；同時更建設 Makerspace，鼓勵科創，讓學生發揮所長。這兩項工程大大造福學弟學妹，令人感動！<br><br>
+            畢業五十年常見，畢業五十年仍友誼長存，心繫母校，這份真摯的感情實在是人間瑰寶。我衷心祝願賢社金禧誌慶活動圓滿成功，各位賢社學長身體健康，生活愉快，主恩常伴！
+          </div>
+        </div>
+
+        <!-- RIGHT CARD -->
+        <div class="card">
+          <div class="card-heading">一九七二年級賢社五十周年金禧誌慶</div>
+          <div class="avatar">
+            <img src="https://i0.wp.com/goldenyinnies.com/wp-content/uploads/2022/10/Copy-of-%E8%91%89%E5%B1%95%E6%BC%A2%E6%A0%A1%E9%95%B7-%E5%B0%8F%E5%AD%B8a.png?fit=1970%2C2549&amp;ssl=1" alt="葉展漢校長" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div class="card-name">葉展漢校長 (小學)</div>
+          <div class="poem">
+            <p>相識相伴五十載</p>
+            <p>英賢薈萃慶金禧</p>
+            <p>同窗友誼顯情深</p>
+            <p>紅藍兒女同歡欣</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- POST VIEWS -->
+    <div class="post-views">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="14" width="4" height="7" fill="currentColor"/>
+        <rect x="10" y="9" width="4" height="12" fill="currentColor"/>
+        <rect x="17" y="4" width="4" height="17" fill="currentColor"/>
+      </svg>
+      Post Views: 49
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="links">
+      <a href="index.html">主頁</a>
+      <a href="jubilee.html">50 金禧</a>
+      <a href="#">55 翡翠禧</a>
+      <a href="#">母校培正</a>
+      <a href="#">賢社</a>
+      <a href="#">同學</a>
+      <a href="#">那些時光</a>
+      <a href="#">流金歲月</a>
+      <a href="#">編後頁</a>
+    </div>
+    <div class="sub"><a href="#">最新上載</a></div>
+  </footer>
+
+  <script>
+    // Fill the "+" divider across the full width responsively
+    const el = document.getElementById('plusDivider');
+    function fillPlus(){
+      el.textContent = '';
+      const charWidth = parseFloat(getComputedStyle(el).fontSize) * 0.9;
+      const count = Math.ceil(el.parentElement.clientWidth / charWidth);
+      el.textContent = '+'.repeat(count);
+    }
+    window.addEventListener('resize', fillPlus);
+    fillPlus();
+  </script>
+
+</body>
+</html>
