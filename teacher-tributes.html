@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>校長老師序言 ~ 良師贈言-留影 - Golden Yinnies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#f7f4ec;
+    --brown:#4a2a12;
+    --brown-deep:#3a2010;
+    --panel:#a98868;
+    --gold-dark:#d99e1f;
+    --ink:#242018;
+    --ink-dim:#4a4a4a;
+    --sans:"Noto Sans TC", sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:var(--sans);
+  }
+
+  /* ---------- NAV ---------- */
+  .site-nav{
+    background:var(--brown);
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    padding:0 clamp(16px, 4vw, 40px);
+  }
+  .site-nav a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    font-size:clamp(.8rem, 1.3vw, 1rem);
+    padding:clamp(14px, 2.2vw, 20px) clamp(10px, 1.6vw, 20px);
+    display:flex;
+    align-items:center;
+    gap:4px;
+    white-space:nowrap;
+  }
+  .site-nav a.active{ color:#d7e02a; }
+  .site-nav a:hover{ color:var(--gold-dark); }
+  .site-nav a .caret{
+    font-size:.65em;
+    margin-left:2px;
+    transform:translateY(1px);
+  }
+
+  /* ---------- TOP ---------- */
+  .top-section{
+    padding:clamp(28px, 5vw, 46px) clamp(16px, 4vw, 40px) clamp(10px, 2vw, 20px);
+  }
+  .page-title{
+    text-align:center;
+    font-size:clamp(1.2rem, 3vw, 2rem);
+    font-weight:500;
+    letter-spacing:.06em;
+    margin:0 0 clamp(16px, 3vw, 24px);
+  }
+
+  /* ---------- ARROW DIVIDER ---------- */
+  .arrow-wrap{
+    max-width:1600px;
+    margin:0 auto clamp(24px, 4.5vw, 40px);
+    overflow:hidden;
+    white-space:nowrap;
+    font-weight:900;
+    font-size:clamp(.8rem, 1.8vw, 1.3rem);
+    letter-spacing:clamp(1px, .5vw, 4px);
+    color:#1c1c1c;
+    line-height:1;
+  }
+
+  /* ---------- PANEL ---------- */
+  .panel{
+    max-width:1600px;
+    margin:0 auto clamp(20px, 4vw, 34px);
+    background:var(--panel);
+    padding:clamp(16px, 3vw, 30px);
+    border-radius:2px;
+  }
+  .card-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:clamp(16px, 2.5vw, 28px);
+  }
+  .card{
+    background:#fff;
+    padding:clamp(16px, 2.6vw, 26px);
+    position:relative;
+  }
+  .card-heading{
+    font-size:clamp(.8rem, 1.4vw, .95rem);
+    font-weight:700;
+    margin:0 0 14px;
+  }
+  .avatar{
+    width:100%;
+    max-width:220px;
+    aspect-ratio:3/4;
+    margin:0 auto 14px;
+    display:block;
+    background:#e4e4e4;
+    overflow:hidden;
+  }
+  .avatar img, .avatar svg{ width:100%; height:100%; object-fit:cover; display:block; }
+  .card-name{
+    text-align:center;
+    font-weight:700;
+    font-size:clamp(.9rem, 1.6vw, 1.05rem);
+    margin:0 0 14px;
+  }
+  .sub-heading{
+    text-align:center;
+    font-weight:700;
+    font-size:clamp(.95rem, 1.7vw, 1.15rem);
+    margin:0 0 16px;
+  }
+  .card-text{
+    font-size:clamp(.78rem, 1.3vw, .9rem);
+    line-height:1.85;
+    color:var(--ink);
+    text-align:justify;
+  }
+  .card-text + .card-text{ margin-top:12px; }
+  .poem{
+    display:flex;
+    flex-direction:column;
+    gap:clamp(10px, 2vw, 16px);
+    align-items:center;
+    margin-top:4px;
+  }
+  .poem p{
+    margin:0;
+    font-size:clamp(.85rem, 1.6vw, 1.05rem);
+    font-weight:700;
+    letter-spacing:clamp(3px, 1vw, 8px);
+  }
+  .corner-note{
+    position:absolute;
+    bottom:10px;
+    right:14px;
+    font-size:.7rem;
+    color:var(--ink-dim);
+  }
+  .gift-block{
+    text-align:center;
+  }
+  .gift-block .gift-title{
+    font-weight:700;
+    font-size:clamp(.95rem, 1.7vw, 1.15rem);
+    margin-bottom:14px;
+  }
+  .gift-block p{
+    margin:0 0 6px;
+    font-size:clamp(.85rem, 1.5vw, 1rem);
+  }
+  .photo-gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    margin-top:14px;
+  }
+  .photo-gallery img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    background:#eee;
+    display:block;
+  }
+  .photo-gallery.single{ grid-template-columns:1fr; }
+  .two-col{
+    display:flex;
+    gap:clamp(12px, 2vw, 20px);
+    align-items:flex-start;
+  }
+  .two-col .avatar{ flex:0 0 auto; width:38%; margin:0; }
+  .two-col .text-col{ flex:1; }
+
+  /* ---------- POST VIEWS ---------- */
+  .post-views{
+    max-width:1600px;
+    margin:clamp(14px, 2.5vw, 20px) auto 0;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:var(--gold-dark);
+    font-size:.9rem;
+    padding:0 clamp(16px, 4vw, 40px) clamp(40px, 6vw, 60px);
+  }
+  .post-views svg{ width:16px; height:16px; }
+
+  /* ---------- FOOTER ---------- */
+  .site-footer{
+    text-align:center;
+    font-size:clamp(.82rem, 1.4vw, .98rem);
+    color:var(--ink-dim);
+    padding:clamp(20px, 3vw, 30px) 20px clamp(40px, 6vw, 60px);
+  }
+  .site-footer a{
+    color:var(--ink-dim);
+    text-decoration:none;
+    margin:0 clamp(6px, 1.2vw, 14px);
+  }
+  .site-footer a:hover{ text-decoration:underline; }
+  .site-footer .sub{ margin-top:4px; }
+
+  @media (max-width:980px){
+    .card-grid{ grid-template-columns:repeat(2, 1fr); }
+  }
+  @media (max-width:620px){
+    .card-grid{ grid-template-columns:1fr; }
+    .two-col{ flex-direction:column; }
+    .two-col .avatar{ width:60%; margin:0 auto 14px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <a href="index.html">主頁</a>
+    <a href="jubilee.html" class="active">50 金禧 <span class="caret">▾</span></a>
+    <a href="#">55 翡翠禧</a>
+    <a href="#">母校培正 <span class="caret">▾</span></a>
+    <a href="#">賢社 <span class="caret">▾</span></a>
+    <a href="#">同學 <span class="caret">▾</span></a>
+    <a href="#">那些時光 <span class="caret">▾</span></a>
+    <a href="#">流金歲月 <span class="caret">▾</span></a>
+    <a href="#">編後頁 <span class="caret">▾</span></a>
+    <a href="#">最新上載 <span class="caret">▾</span></a>
+  </nav>
+
+  <div class="top-section">
+    <h1 class="page-title">校長老師序言 ~ 良師贈言-留影</h1>
+
+    <!-- ARROW DIVIDER -->
+    <div class="arrow-wrap" id="arrowDivider"></div>
+
+    <!-- PANEL -->
+    <div class="panel">
+      <div class="card-grid">
+
+        <!-- CARD 1: 李仕浣校長 -->
+        <div class="card">
+          <div class="card-heading">賢社金禧紀念</div>
+          <div class="avatar">
+            <svg viewBox="0 0 100 133" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="133" fill="#e4e4e4"/><circle cx="50" cy="48" r="22" fill="#c7c7c7"/><path d="M14 120 Q50 78 86 120 Z" fill="#c7c7c7"/></svg>
+          </div>
+          <div class="card-name">李仕浣校長 (小學-榮休)</div>
+          <div class="poem">
+            <p>相聚紅藍五十載</p>
+            <p>校園點滴存心內</p>
+            <p>彼此互勉情永在</p>
+            <p>年年相聚樂無休</p>
+          </div>
+        </div>
+
+        <!-- CARD 2: 何國斌老師 -->
+        <div class="card">
+          <div class="card-heading">何國斌老師</div>
+          <div class="avatar">
+            <svg viewBox="0 0 100 133" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="133" fill="#e4e4e4"/><circle cx="50" cy="48" r="22" fill="#c7c7c7"/><path d="M14 120 Q50 78 86 120 Z" fill="#c7c7c7"/></svg>
+          </div>
+          <div class="sub-heading">賢社畢業五十周年紀念</div>
+          <div class="card-text">Albert Camus 介紹 Sisyphus 推石上山的神話故事，每次當他辛苦把石推了上山，石頭隨即又復滾下來，如是者年年月月不變。</div>
+          <div class="card-text">問題是：他根本全無盼望，可為甚麼仍然繼續奮鬥？</div>
+        </div>
+
+        <!-- CARD 3: 劉紹其老師 -->
+        <div class="card">
+          <div class="card-heading">劉紹其老師</div>
+          <div class="avatar">
+            <svg viewBox="0 0 100 133" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="133" fill="#e4e4e4"/><circle cx="50" cy="48" r="22" fill="#c7c7c7"/><path d="M14 120 Q50 78 86 120 Z" fill="#c7c7c7"/></svg>
+          </div>
+          <div class="poem">
+            <p>祝願賢社</p>
+            <p>先金後鑽</p>
+            <p>再下一城</p>
+          </div>
+          <div class="corner-note">P.1</div>
+        </div>
+
+        <!-- CARD 4: 吳麥業老師 -->
+        <div class="card">
+          <div class="card-heading">吳麥業老師</div>
+          <div class="two-col">
+            <div class="avatar">
+              <svg viewBox="0 0 100 133" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="133" fill="#e4e4e4"/><circle cx="50" cy="48" r="22" fill="#c7c7c7"/><path d="M14 120 Q50 78 86 120 Z" fill="#c7c7c7"/></svg>
+            </div>
+            <div class="text-col gift-block">
+              <div class="gift-title">贈相代言</div>
+              <p>兒孫滿堂</p>
+              <p>兒子三位</p>
+              <p>男孫三位</p>
+              <p>女孫一位</p>
+            </div>
+          </div>
+          <div class="photo-gallery">
+            <img src="" alt="家庭照片" style="background:#eee;">
+            <img src="" alt="家庭照片" style="background:#eee;">
+            <img src="" alt="家庭照片" style="background:#eee;">
+            <img src="" alt="家庭照片" style="background:#eee;">
+          </div>
+        </div>
+
+        <!-- CARD 5: 易少華老師 -->
+        <div class="card">
+          <div class="card-heading">易少華老師</div>
+          <div class="card-text">大家好！恭賀你們中學畢業五十年了。</div>
+          <div class="card-text">各位事業有成，家庭幸福美滿。</div>
+          <div class="card-text">我為你們驕傲，也為培正驕傲。</div>
+          <div class="card-text">願 神祝福各位：</div>
+          <div class="card-text">每天都有好心情，日日亦有好風景，愉悅過好每一天，喜樂數算 神深恩。</div>
+          <div class="card-text">同時並祝福各位，身體健康，友誼永固。</div>
+          <div class="photo-gallery">
+            <img src="" alt="照片" style="background:#eee;">
+            <img src="" alt="照片" style="background:#eee;">
+            <img src="" alt="照片" style="background:#eee;">
+          </div>
+        </div>
+
+        <!-- CARD 6: 柳鎮平老師 -->
+        <div class="card">
+          <div class="card-heading">柳鎮平老師</div>
+          <div class="avatar">
+            <svg viewBox="0 0 100 133" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="133" fill="#e4e4e4"/><circle cx="50" cy="48" r="22" fill="#c7c7c7"/><path d="M14 120 Q50 78 86 120 Z" fill="#c7c7c7"/></svg>
+          </div>
+          <div class="sub-heading">祝福賢社眾校友金禧成功</div>
+          <div class="card-text">各展所能，進入人生下半場，再闖高峯，造福人群，愛護家園，更了解天父的永遠計劃大計，得以進入未來永遠國度，不單享受天父的愛，而且可以和基督耶穌一同作王，直到永永遠遠，千萬年，前途無限。</div>
+        </div>
+
+        <!-- CARD 7: 梁崇榆老師 -->
+        <div class="card">
+          <div class="card-heading">梁崇榆老師</div>
+          <div class="two-col">
+            <div class="avatar">
+              <svg viewBox="0 0 100 133" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="133" fill="#e4e4e4"/><circle cx="50" cy="48" r="22" fill="#c7c7c7"/><path d="M14 120 Q50 78 86 120 Z" fill="#c7c7c7"/></svg>
+            </div>
+            <div class="text-col">
+              <div class="sub-heading" style="text-align:left;font-size:.95rem;">依稀的往事</div>
+              <div class="card-text">難得五十年後，同學們竟然還記得培垟已賣走老去我，真的是感慨萬千！想起 67 年接林天鹉老師之召喚，得見李孟樓校長，又得王祖詒等老師的極力推薦，獲母校聘任為歷史及中文科教員，回到母校服務，當年的母校既是私立受助學校，教師除學校所發薪金之外，還有政府定額的津貼，但和一般津補學校老師的薪金還是有一定的差距。</div>
+            </div>
+          </div>
+          <div class="card-text">回到母校，擔的課是林老師所教的中四全級的中國歷史課。每周七節，這樣的課時對比其他學科是比較輕鬆的，這樣的編排真至何澤乾學長回來任職中史科主任及他婚後太太亦然接後進任教後，對此傳統編制不滿而改變，我最後在教的一年也不須教中國歷史了。</div>
+          <div class="card-text">你們賢社我不知有沒有記錯，墳王張嘉凌，槶王梁美麟，游泳的趙碧珊，梁明生是否你們屆的同學？丁重農是泰國的寓宿生，我住宿學校時亦仿時常見他。斯熙文之的，不如伍超賢是不是愛唱歌的那個仔子同學？宋立言一家曾任過遇渭小頌島街我開朗的宿舍樓上，所以早認得他管哥宗立幢，往事不堪回首，能力提化，只記得你們水陸運會成績非凡，也有一批 AA 讀書出色的同學，記不清潔提提的同學！徐婉薈、張宣帝、黃天一等等。</div>
+          <div class="card-text">七二年我離開培正，轉到僑滙查對的華英中學任教，七年後又轉到宅門顧德聯誼會辦的課仔到中學任職直至二零零三年退休，三十餘年的教學生涯，母校的五年始終著你們，教學相長，獲益良多，衷心的謝謝你們。</div>
+          <div class="photo-gallery">
+            <img src="" alt="合照" style="background:#eee;">
+            <img src="" alt="合照" style="background:#eee;">
+          </div>
+        </div>
+
+        <!-- CARD 8: 陳力行老師 -->
+        <div class="card">
+          <div class="card-heading">陳力行老師</div>
+          <div class="two-col">
+            <div class="avatar">
+              <svg viewBox="0 0 100 133" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="133" fill="#e4e4e4"/><circle cx="50" cy="48" r="22" fill="#c7c7c7"/><path d="M14 120 Q50 78 86 120 Z" fill="#c7c7c7"/></svg>
+            </div>
+            <div class="text-col gift-block">
+              <div class="gift-title">書贈賢社同學畢業金禧</div>
+              <p>睹惡省身</p>
+              <p>見賢思齊</p>
+            </div>
+          </div>
+          <div class="photo-gallery single">
+            <img src="" alt="聚會合照" style="background:#eee;aspect-ratio:16/9;">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- POST VIEWS -->
+    <div class="post-views">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="14" width="4" height="7" fill="currentColor"/>
+        <rect x="10" y="9" width="4" height="12" fill="currentColor"/>
+        <rect x="17" y="4" width="4" height="17" fill="currentColor"/>
+      </svg>
+      Post Views: 67
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="links">
+      <a href="index.html">主頁</a>
+      <a href="jubilee.html">50 金禧</a>
+      <a href="#">55 翡翠禧</a>
+      <a href="#">母校培正</a>
+      <a href="#">賢社</a>
+      <a href="#">同學</a>
+      <a href="#">那些時光</a>
+      <a href="#">流金歲月</a>
+      <a href="#">編後頁</a>
+    </div>
+    <div class="sub"><a href="#">最新上載</a></div>
+  </footer>
+
+  <script>
+    const el = document.getElementById('arrowDivider');
+    function fillArrows(){
+      el.textContent = '';
+      const charWidth = parseFloat(getComputedStyle(el).fontSize) * 0.85;
+      const count = Math.ceil(el.parentElement.clientWidth / charWidth);
+      el.textContent = '➡'.repeat(count);
+    }
+    window.addEventListener('resize', fillArrows);
+    fillArrows();
+  </script>
+
+</body>
+</html>
