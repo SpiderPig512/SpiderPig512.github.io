@@ -95,6 +95,17 @@
     background:#fff;
     padding:clamp(18px, 3vw, 30px);
   }
+  .card.card-full{
+    padding:0;
+    overflow:hidden;
+    display:flex;
+  }
+  .full-slide{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+  }
   .card-heading{
     font-size:clamp(.85rem, 1.5vw, 1rem);
     font-weight:700;
@@ -197,31 +208,13 @@
       <div class="card-grid">
 
         <!-- LEFT CARD -->
-        <div class="card">
-          <div class="card-heading">社代表心聲</div>
-          <div class="avatar">
-            <svg viewBox="0 0 100 133" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="133" fill="#e4e4e4"/><circle cx="50" cy="48" r="22" fill="#c7c7c7"/><path d="M14 120 Q50 78 86 120 Z" fill="#c7c7c7"/></svg>
-          </div>
-          <div class="card-name">劉紀美</div>
-          <div class="poem">
-            <p>不在乎天長地久</p>
-            <p>只在乎賢社社友</p>
-          </div>
+        <div class="card card-full">
+          <img class="full-slide" src="images/liu-kei-mei-slide.png" alt="社代表心聲 - 劉紀美">
         </div>
 
         <!-- RIGHT CARD -->
-        <div class="card">
-          <div class="card-heading">社長心聲</div>
-          <div class="avatar">
-            <svg viewBox="0 0 100 133" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="133" fill="#e4e4e4"/><circle cx="50" cy="48" r="22" fill="#c7c7c7"/><path d="M14 120 Q50 78 86 120 Z" fill="#c7c7c7"/></svg>
-          </div>
-          <div class="card-name">姚蘭莉</div>
-          <div class="card-text">在多倫多寫這篇社長的話，想來想去，無處落筆。只想到「謝謝」同「感恩」四個字。</div>
-          <div class="card-text">沒有這麼多同學的支持，我們金禧，怎樣可以籌到 $2,500,000 的款項。好開心在金禧，用這筆款，我們可以將我們的賢社大樓，裝修得更加好，更加實用，更符合學校的需要。</div>
-          <div class="card-text">沒有同學的支持，我們的金禧紀念冊，如何能做到這麼豐富的內容呢！<br>沒有同學的支持，多倫多金禧重聚，如何能做到這麼圓滿呢！<br>有同學們的支持，我們香港 50 金禧一定會閃閃生輝。</div>
-          <div class="card-text">這本過百頁的金禧紀念冊，是所有同學們的心血，大家都好久沒有作文咗，但大家都願意將畢業後，到現在 50 年後喺生活點滴上載，大家分享。因為我們一齊長大，一齊經歷。它將來一定一直在我們每個家庭的角落。</div>
-          <div class="card-text">在此謹衷心感謝為這本紀念冊做編輯，追稿，查閱資料，校對，等工作嘅工作小組，她們可以在短短六個月時間，用香港精神，香港速度，先可以將呢件事情做好，並設有電子版。</div>
-          <div class="card-text">希望我們金禧後，更多團聚時間，一齊過我們的銀髮一族。</div>
+        <div class="card card-full">
+          <img class="full-slide" src="images/yiu-lan-lei-slide.png" alt="社長心聲 - 姚蘭莉">
         </div>
 
       </div>
